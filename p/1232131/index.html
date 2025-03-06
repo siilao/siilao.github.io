@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="###hello work\n">
-<title>Fistblog</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<title>1232131</title>
 
-<link rel='canonical' href='https://siilao.github.io/p/fistblog/'>
+<link rel='canonical' href='https://siilao.github.io/p/1232131/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Fistblog">
-<meta property='og:description' content="###hello work\n">
-<meta property='og:url' content='https://siilao.github.io/p/fistblog/'>
+<link rel="stylesheet" href="/scss/style.min.b41fbeb1758861b170a462ca5c5b93b973caa976a8f1c39fb877a49158ef60fb.css"><meta property='og:title' content="1232131">
+<meta property='og:description' content="">
+<meta property='og:url' content='https://siilao.github.io/p/1232131/'>
 <meta property='og:site_name' content='肆佬科技'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-06T09:12:31&#43;08:00'/><meta property='article:modified_time' content='2025-03-06T09:12:31&#43;08:00'/>
-<meta name="twitter:title" content="Fistblog">
-<meta name="twitter:description" content="###hello work\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-06T12:09:38&#43;08:00'/><meta property='article:modified_time' content='2025-03-06T12:10:44&#43;08:00'/>
+<meta name="twitter:title" content="1232131">
+<meta name="twitter:description" content="">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -250,7 +250,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/fistblog/">Fistblog</a>
+            <a href="/p/1232131/">1232131</a>
         </h2>
     
         
@@ -287,7 +287,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 0 分钟
                 </time>
             </div>
         
@@ -302,15 +302,26 @@
     <section class="article-content">
     
     
-    <p>###hello work</p>
-
+    
 </section>
 
 
     <footer class="article-footer">
     
 
-    </footer>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Mar 06, 2025 12:10 &#43;0800
+        </span>
+    </section></footer>
 
 
     
@@ -436,6 +447,52 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
 </script>
 
     </body>

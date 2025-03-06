@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://siilao.github.io/categories/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Categories">
+<link rel="stylesheet" href="/scss/style.min.b41fbeb1758861b170a462ca5c5b93b973caa976a8f1c39fb877a49158ef60fb.css"><meta property='og:title' content="Categories">
 <meta property='og:description' content="一个爱分享的博主!!!">
 <meta property='og:url' content='https://siilao.github.io/categories/'>
 <meta property='og:site_name' content='肆佬科技'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-06T10:34:15&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-06T04:11:41&#43;00:00 '/>
 <meta name="twitter:title" content="Categories">
 <meta name="twitter:description" content="一个爱分享的博主!!!"><link rel="alternate" type="application/rss&#43;xml" href="https://siilao.github.io/categories/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -282,15 +282,7 @@
                     <a href="/archives/#2025">
                         
                             <span class="year">2025</span>
-                            <span class="count">3</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2020">
-                        
-                            <span class="year">2020</span>
-                            <span class="count">1</span>
+                            <span class="count">2</span>
                         
                     </a> 
                 </div>
@@ -298,7 +290,7 @@
                     <a href="/archives/#2019">
                         
                             <span class="year">2019</span>
-                            <span class="count">4</span>
+                            <span class="count">3</span>
                         
                     </a> 
                 </div>
@@ -325,12 +317,12 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/categories/test/" class="font_size_3">
-                Test
-            </a>
-        
             <a href="/categories/syntax/" class="font_size_1">
                 Syntax
+            </a>
+        
+            <a href="/categories/test/" class="font_size_1">
+                Test
             </a>
         
             <a href="/categories/test-with-whitespaces/" class="font_size_1">
@@ -339,10 +331,6 @@
         
             <a href="/categories/themes/" class="font_size_1">
                 Themes
-            </a>
-        
-            <a href="/categories/%E6%B5%8B%E8%AF%95/" class="font_size_1">
-                测试
             </a>
         
     </div>
@@ -372,10 +360,6 @@
         
             <a href="/tags/css/" class="font_size_1">
                 Css
-            </a>
-        
-            <a href="/tags/emoji/" class="font_size_1">
-                Emoji
             </a>
         
             <a href="/tags/html/" class="font_size_1">
@@ -411,7 +395,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">5 个页面</h3>
+                <h3 class="section-count">4 个页面</h3>
                 <h1 class="section-term">Categories</h1>
                 
             </div>
@@ -421,24 +405,22 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/categories/themes/">
+    <a href="/categories/test/">
         <div class="article-details">
-            <h2 class="article-title">Themes</h2>
+            <h2 class="article-title">Test</h2>
             <footer class="article-time">
-                <time datetime='2019-03-11T00:00:00Z'>2019-03-11</time>
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
             </footer>
         </div>
-    </a>
-</article>
+            <div class="article-image">
+                <img src="/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash_hu_30cc804daec7a86b.jpg" 
+                        width="120"
+                        height="120" 
+                        alt="Test"
+                        loading="lazy">
+                
+            </div>
         
-            <article>
-    <a href="/categories/test-with-whitespaces/">
-        <div class="article-details">
-            <h2 class="article-title">Test With Whitespaces</h2>
-            <footer class="article-time">
-                <time datetime='2019-03-09T00:00:00Z'>2019-03-09</time>
-            </footer>
-        </div>
     </a>
 </article>
         
@@ -491,6 +473,52 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
 </script>
 
     </body>
