@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>肆佬科技</copyright>
-        <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://siilao.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Mar 2025 13:34:41 +0800</lastBuildDate><atom:link href="https://siilao.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Github</title>
+        <link>https://siilao.github.io/tags/github/</link>
+        <pubDate>Fri, 07 Mar 2025 13:34:41 +0800</pubDate>
+        
+        <guid>https://siilao.github.io/tags/github/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hugo</title>
+        <link>https://siilao.github.io/tags/hugo/</link>
+        <pubDate>Fri, 07 Mar 2025 13:34:41 +0800</pubDate>
+        
+        <guid>https://siilao.github.io/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Markdown</title>
         <link>https://siilao.github.io/tags/markdown/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
