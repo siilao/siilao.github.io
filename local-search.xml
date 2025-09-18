@@ -11,6 +11,18 @@
     <content type="html"><![CDATA[<p>测试<br>1231123123</p>]]></content>
     
     
+    <categories>
+      
+      <category>测试内容</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>测试</tag>
+      
+    </tags>
     
   </entry>
   
