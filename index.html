@@ -75,10 +75,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Hexo创建及部署到Cloudflare" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-你好" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/09/18/Hexo%E5%88%9B%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare/" class="article-date">
-  <time class="dt-published" datetime="2025-09-18T02:29:26.000Z" itemprop="datePublished">2025-09-18</time>
+    <a href="/2025/09/18/%E4%BD%A0%E5%A5%BD/" class="article-date">
+  <time class="dt-published" datetime="2025-09-18T03:59:10.000Z" itemprop="datePublished">2025-09-18</time>
 </a>
     
   </div>
@@ -89,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/18/Hexo%E5%88%9B%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare/">Hexo创建及部署到Cloudflare</a>
+      <a class="p-name article-title" href="/2025/09/18/%E4%BD%A0%E5%A5%BD/">你好</a>
     </h1>
   
 
@@ -97,85 +97,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>想必大家都想拥有自己的网站吧！今天教大家如何用Hexo创建网站并部署到Cloudflare。你可以在那里写写心得，记录生活…让我们开始吧！</p>
-<hr>
-<p>做好一件事情都需要准备工作，所以…</p>
-<h1 id="1、准备工作"><a href="#1、准备工作" class="headerlink" title="1、准备工作"></a>1、准备工作</h1><ul>
-<li>安装 Git [<a target="_blank" rel="noopener" href="https://git-scm.com/">下载</a>]</li>
-<li>安装 Node.js [<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">下载(中文官网)</a>]</li>
-<li>MarkText [<a target="_blank" rel="noopener" href="https://wwqg.lanzoub.com/ia3jN3320s6d/">蓝奏云下载</a> (密码：md-b64)]</li>
-</ul>
-<p>以上文件如果下载速度慢，或访问速度慢，可以来到我的网盘下载：</p>
-<p>1、<a target="_blank" rel="noopener" href="https://wwqg.lanzoub.com/b013921iab">蓝奏云</a>：</p>
-<p>密码：htoc</p>
-<p>2、<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1z3PDMoABlfuhi5kpdGPQxg?pwd=Web1">百度网盘</a> ：</p>
-<p>提取码：Web1（区分大小写）</p>
-<h3 id="检查一下是否安装成功："><a href="#检查一下是否安装成功：" class="headerlink" title="检查一下是否安装成功："></a>检查一下是否安装成功：</h3><p>Git：在桌面或文件夹右键单击，如果出现“Open Git GUI here”和“Open Git Bash here”，说明 Git 安装成功。</p>
-<p>Node.js：按下 Windows 徽标键 + R 键 打开运行框，输入“cmd”并按下 回车键 ，打开命令提示符。输入“node -v”并按下 回车键，如果出现版本号说明 Node.js 安装成功。</p>
-<h1 id="2、开始搭建"><a href="#2、开始搭建" class="headerlink" title="2、开始搭建"></a>2、开始搭建</h1><p>先创建一个用于存放Hexo文件的文件夹。访问 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a> ，往下滑，复制Hexo提供的5行代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>在要存放Hexo文件的文件夹右键单击，选择“Open Git Bash here”，在弹出的窗口中右键单击，选择“Paste”，按下 回车键 ，开始安装Hexo。如果在最后出现 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，说明成功。复制网址，在浏览器中打开，就可以看到Hexo网页了！</p>
-<p>虽然网页出现了，但是这不是在互联网上的网页，而是本地的，没网也能访问，所以我们需要继续制作。</p>
-<h1 id="3、创建文章"><a href="#3、创建文章" class="headerlink" title="3、创建文章"></a>3、创建文章</h1><h3 id="先结束网页的运行："><a href="#先结束网页的运行：" class="headerlink" title="先结束网页的运行："></a>先结束网页的运行：</h3><p>在 GBH (Git Bash here) 窗口中按下 Ctrl键 + C键 ，结束网页运行。</p>
-<h3 id="创建文章："><a href="#创建文章：" class="headerlink" title="创建文章："></a>创建文章：</h3><p>在 GBH窗口 输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;Hello&quot; #创建文章</span><br></pre></td></tr></table></figure>
-
-<p>注：“hello”可以更改，必须要双引号。</p>
-<p>创建完成之后，在Hexo的根目录中进入“blog”文件夹 - “source”文件夹 - “_post”文件夹，找到刚才创建的文章（示例：Hello.md），用MarkText打开，编辑里面的内容。</p>
-<p>注：最上面的信息不要修改，可能会报错！</p>
-<p>编辑完后保存，切换到 GBH窗口 ，输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate #生成网页</span><br></pre></td></tr></table></figure>
-
-<p>也可以简单的输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>然后输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server #运行Hexo</span><br></pre></td></tr></table></figure>
-
-<p>也可以输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>再次在浏览器中打开 “<a target="_blank" rel="noopener" href="http://localhost:4000/%E2%80%9D">http://localhost:4000/”</a> 看看是否生效。</p>
-<h3 id="如果没有生效："><a href="#如果没有生效：" class="headerlink" title="如果没有生效："></a>如果没有生效：</h3><p>运行这行代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清理缓存</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>再次打开 “<a target="_blank" rel="noopener" href="http://localhost:4000/%E2%80%9D%E7%9C%8B%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E3%80%82">http://localhost:4000/”看看是否成功。</a></p>
-<h1 id="4、更换主题"><a href="#4、更换主题" class="headerlink" title="4、更换主题"></a>4、更换主题</h1><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo主页</a> 划到最底部，点击“探索主题”，选择一款你心仪的主题。</p>
-<p>注：可以点击“Visit preview site”预览主题网站。</p>
-<p>点击主题的名称，按照下面的指南安装主题至“themes”文件夹。然后复制主题名称，回到“blog”文件夹内，打开“_config.yml”文件（用纯文本方式打开），将最底下的“theme: ”后面的内容更换成主题名称（已经复制了，直接粘贴即可，防止名称错误），保存文件。</p>
-<p>再次在 GBH窗口 输入代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #要求准确性的就加这行代码</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器中打开 “<a target="_blank" rel="noopener" href="http://localhost:4000/%E2%80%9D%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%BD%91%E9%A1%B5%E3%80%82">http://localhost:4000/”，查看网页。</a></p>
-<h3 id="修改主题细节"><a href="#修改主题细节" class="headerlink" title="修改主题细节"></a>修改主题细节</h3><p>打开“themes”文件夹 - 你的主题文件夹，打开“_config.yml”并按注释修改。</p>
-<p>注：</p>
-<p>1、建议你安装中文主题，这样可以更好的修改主题细节。因为中文主题有中文的解析。</p>
-<p>2、在修改前备份一次，这样在修改乱了之后可以回滚到之前的主题细节。</p>
-<p>再次在 GBH窗口 输入代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器中打开 “<a target="_blank" rel="noopener" href="http://localhost:4000/%E2%80%9D%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%BD%91%E9%A1%B5%E3%80%82">http://localhost:4000/”，查看网页。</a></p>
-<hr>
-<p>恭喜你已经完成Hexo的创建了！接下来上传到互联网吧！</p>
-<h1 id="5、上传到Cloudflare"><a href="#5、上传到Cloudflare" class="headerlink" title="5、上传到Cloudflare"></a>5、上传到Cloudflare</h1><h3 id="注册-登录-Cloudflare-账号"><a href="#注册-登录-Cloudflare-账号" class="headerlink" title="注册&#x2F;登录 Cloudflare 账号"></a>注册&#x2F;登录 Cloudflare 账号</h3><h5 id="来到Cloudflare"><a href="#来到Cloudflare" class="headerlink" title="来到Cloudflare"></a>来到Cloudflare</h5><p>在 <a target="_blank" rel="noopener" href="https://cloudflare.com/">Cloudflare 主页</a> 点击右上角的 “登录”，然后在右上角的语言选项中切换到 ”简体中文“</p>
-<h5 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h5><p>在下方点击“注册”，输入信息开始注册。</p>
-<h5 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h5><p>（呃…应该不用我说了吧）</p>
-<p>输入 电子邮件 和 密码 登录。</p>
-<h3 id="创建-Pages-项目"><a href="#创建-Pages-项目" class="headerlink" title="创建 Pages 项目"></a>创建 <em>Pages</em> 项目</h3><p>在 控制台 的左侧选择 “计算 (Workers)” ，切换到 ”Pages“ 选项卡，选择 ”使用直接上传“ ，输入项目的名称，点击 ”创建项目“ 。</p>
-<h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><p>在 GBH窗口 输入代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>回到浏览器，点击 “从计算机中选择” ，然后点击 “上传文件夹” ，上传 “blog” 文件夹中的 “public” 文件夹，等待文件上传，点击 ”部署站点“ 。</p>
-<h3 id="更新站点"><a href="#更新站点" class="headerlink" title="更新站点"></a>更新站点</h3><p>在 GBH窗口 输入代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>点击项目名称，然后点击 “创建部署” ，再次上传 “public” 文件夹，等待文件上传，点击 “保存并部署” 。</p>
+        <p>测试<br>1231123123</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/18/Hexo%E5%88%9B%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare/" data-id="cmfovqppp00009gizbu0jd0k0" data-title="Hexo创建及部署到Cloudflare" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2025/09/18/%E4%BD%A0%E5%A5%BD/" data-id="cmfovtkoi0000mciz87ne6hju" data-title="你好" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -218,7 +145,7 @@
       <ul>
         
           <li>
-            <a href="/2025/09/18/Hexo%E5%88%9B%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare/">Hexo创建及部署到Cloudflare</a>
+            <a href="/2025/09/18/%E4%BD%A0%E5%A5%BD/">你好</a>
           </li>
         
       </ul>
